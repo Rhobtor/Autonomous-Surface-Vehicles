@@ -41,4 +41,4 @@ Si el comando devuelve el nombre del dispositivo USB, la regla udev se ha creado
 
  [Volver](../)   
 
- [Siguiente: Configuración del Reach M+](/ASV_Loyola_US/reachm+/)
+ [Siguiente: Configuración del Reach M+](/Autonomous-Surface-Vehicles/reachm+/)

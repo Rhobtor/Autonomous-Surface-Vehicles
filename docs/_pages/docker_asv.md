@@ -106,4 +106,4 @@ syanes/asv:arm64: Esta es la imagen de Docker que se utilizará para ejecutar el
 
  [Volver](../)   
 
- [Siguiente: Preparación del Navio2](/ASV/docker_zed/)
+ [Siguiente: Preparación del Navio2](/Autonomous-Surface-Vehicles/docker_zed/)

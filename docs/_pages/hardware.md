@@ -25,13 +25,13 @@ El sistema se compone de los siguientes elementos:
 
 El conexionado del vehículo con el autopiloto se puede ver en la siguiente imagen:
 
-![Conexionado del vehículo con el autopiloto](/ASV/images/placa.png)
+![Conexionado del vehículo con el autopiloto](/Autonomous-Surface-Vehicles/images/placa.png)
 
 ---
 ## Funcionamiento general del sistema
 
 Aqui se muestra un esquemático del funcionamiento del sistema 
-![Esquemático del funcionamiento general del sistema](/ASV/images/asv_scheme.png)
+![Esquemático del funcionamiento general del sistema](/Autonomous-Surface-Vehicles/images/asv_scheme.png)
 
 El Navio2 y la Raspberry Pi 4 conforman la unidad de control del vehículo. Dentro de la Raspberry Pi 4 se ejecuta Ardupilot 4.0.0, que permite el guiado del vehículo. La configuración de Ardupilot se puede encontrar en el siguiente [enlace](https://docs.emlid.com/navio2/ardupilot/installation-and-running). A través del rail de pines se controla la velocidad de los motores mediante los circuitos variadores (ESCs). El primer pin del rail de pines está reservado para el receptor del Radio Control en modo SBUS, para la maniobra manual del vehículo.
 
@@ -41,7 +41,7 @@ El GPS RTK Reach M+ se comunica con Navio2 a través del puerto USB, que tambié
 
 
 
-Los sensores [sonar](/ASV/sonar/) y [sensor](/ASV/sensoresaml/) , asi como la camara ZED2i son conectados a traves de un socket por la parte lateral de la caja a la Jetson Xavier.    
+Los sensores [sonar](/Autonomous-Surface-Vehicles/sonar/) y [sensor](/Autonomous-Surface-Vehicles/sensoresaml/) , asi como la camara ZED2i son conectados a traves de un socket por la parte lateral de la caja a la Jetson Xavier.    
 
 Por último, el router cuenta con una tarjeta SIM que permite la conexión a la red celular de telefonía y la consiguiente comunicación con el servidor central.
 
@@ -49,4 +49,4 @@ Por último, el router cuenta con una tarjeta SIM que permite la conexión a la 
 ---
  [Volver](../)   
 
- [Siguiente: Preparación del Navio2](/ASV/navio2/)
+ [Siguiente: Preparación del Navio2](/Autonomous-Surface-Vehicles/navio2/)
