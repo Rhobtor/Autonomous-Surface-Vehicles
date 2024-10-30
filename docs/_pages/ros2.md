@@ -9,7 +9,7 @@ permalink: /ros2/
 
 Este es un esquemático del funcionamiento del código de navegación y utilización de los sensores :
 
-![Esquematico del codigo de ASV](/ASV_Loyola_US/images/ROS2scheme.png)
+![Esquematico del codigo de ASV](/ASV/images/ROS2scheme.png)
 
  
 A continuación, se detalla una explicacion mas detallada del codigo de navegacion y utilizacion de los sensores: 

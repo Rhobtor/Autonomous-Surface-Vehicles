@@ -16,7 +16,7 @@ La sonda de sensores de calidad del agua AML-3 XC cuenta con 3 sensores:
 
 Las características de los sensores son los siguientes:
 
-![Características de los sensores](/ASV_Loyola_US/images/sensor_chars.png)
+![Características de los sensores](/ASV/images/sensor_chars.png)
 
 La sonda tiene una batería interna que se puede cargar con un USB-C normal. Una vez se enciende la sonda, por defecto, la sonda comienza a tomar medidas una vez detecta que está sumergida.
 Es posible comunicarse con la sonda utilizando el puerto RS232. El protocolo de comunicación se basa en una serie de comandos que se envían a la sonda y que devuelven una respuesta. La sonda tiene un *baud rate* de 115200 baudios (valor predeterminado).
@@ -41,4 +41,4 @@ son los nombres de los sensores en cada mensaje:
 
  [Volver](../)   
 
- [Siguiente: Preparación del Navio2](/ASV_Loyola_US/sonar/)
+ [Siguiente: Preparación del Navio2](/ASV/sonar/)

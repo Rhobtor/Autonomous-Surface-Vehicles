@@ -7,7 +7,7 @@ permalink: /docker_asv/
 
 ## Docker ASV
 
-Este Docker se encarga del movimiento del vehículo, la adquisición de los datos de los sensores equipados y comunicación con el servidor. Para realizar el Docker nos basamos en un dockerfile propio donde copiamos el código de ASV [enlace](https://github.com/derpberk/ASV_Loyola_US), exponemos los puertos para la conexión con Navio2 y lanzamos el código para que se ejecute con un ros2 launch. El código del dockerfile se encuentra en el mismo repositorio, actualmente se encuentra dos disponible dos dockerfile tanto para sistema AMD y ARM.
+Este Docker se encarga del movimiento del vehículo, la adquisición de los datos de los sensores equipados y comunicación con el servidor. Para realizar el Docker nos basamos en un dockerfile propio donde copiamos el código de ASV [enlace](https://github.com/Rhobtor/Autonomous-Surface-Vehicles), exponemos los puertos para la conexión con Navio2 y lanzamos el código para que se ejecute con un ros2 launch. El código del dockerfile se encuentra en el mismo repositorio, actualmente se encuentra dos disponible dos dockerfile tanto para sistema AMD y ARM.
 
 Para el dockerfile ARM utilizamos la siguiente imagen 
 ```bash
@@ -85,7 +85,7 @@ RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build"
 ```
 Por último se lanza mediante comando, que al iniciarse el docker realice esta siguiente acción, donde realiza un "source" ROS2 y dependencias del código generado en la build generada en el paso anterior. Por último, realizamos un ros2 launch para donde ejecutamos el archivo system.launch.py donde se encuentra tanto los nodos como los parámetros para hacer funcionar nuestro ASV.
 ```bash
-CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash; source install/setup.bash; ros2 launch asv_loyola_us system.launch.py"]
+CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash; source install/setup.bash; ros2 launch ASV system.launch.py"]
 ```
 
 Para lanzar el dockerfile se realiza mediante el siguiente comando
@@ -106,4 +106,4 @@ syanes/asv:arm64: Esta es la imagen de Docker que se utilizará para ejecutar el
 
  [Volver](../)   
 
- [Siguiente: Preparación del Navio2](/ASV_Loyola_US/docker_zed/)
+ [Siguiente: Preparación del Navio2](/ASV/docker_zed/)

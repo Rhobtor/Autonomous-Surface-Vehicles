@@ -30,4 +30,4 @@ Los parámetros que se han configurado son los siguientes:
 
  [Volver](../)   
 
- [Siguiente: Configuración del Reach M+](/ASV_Loyola_US/reachm+/)
+ [Siguiente: Configuración del Reach M+](/ASV/reachm+/)
