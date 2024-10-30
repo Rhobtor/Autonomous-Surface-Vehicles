@@ -1,0 +1,51 @@
+FROM osrf/ros:humble-desktop-full
+
+ENV QT_X11_NO_MITSHM=1
+ENV EDITOR=nano
+ENV XDG_RUNTIME_DIR=/tmp
+ENV ROS_DOMAIN_ID=42
+RUN apt-get update && apt-get install -y \
+    cmake \
+    curl \
+    nano \
+    dos2unix \
+    python3-pip \
+    python3-pydantic \
+    ruby-dev \
+    wget \
+    xorg-dev \
+    iputils-ping
+
+RUN apt install ros-humble-mavros -y
+
+# TODO: Estas dependencias se meteran en un dependencies.txt
+RUN pip3 install setuptools==58.2.0
+RUN pip3 install scipy
+RUN pip3 install "paho-mqtt<2.0.0"
+
+RUN apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
+EXPOSE 1883 1880
+
+COPY ./asv_workspace /home/asv_workspace
+COPY ./server_workspace /home/server_workspace
+
+WORKDIR /home/asv_workspace
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build  --packages-up-to asv_interfaces"
+RUN /bin/bash -c "source /home/asv_workspace/install/setup.bash"
+WORKDIR /home/server_workspace
+RUN /bin/bash -c "colcon build"
+RUN /bin/bash -c "source /home/server_workspace/install/setup.bash"
+RUN echo 'alias source_ros2="source /home/server_workspace/install/setup.bash"' >> ~/.bashrc
+
+
+COPY ros_entrypoint_server.sh /sbin/ros_entrypoint.sh
+RUN sudo chmod +777 /sbin/ros_entrypoint.sh
+ENTRYPOINT ["/sbin/ros_entrypoint.sh"]
+CMD ["bash"]
+
+
+
+

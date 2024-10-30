@@ -1,0 +1,17 @@
+FROM rhobtor/asv_yolo_arm_l4t_35.1.0
+
+WORKDIR /home/asv_zed2icamera_workspace
+COPY ../asv_zed2icamera_workspace /home/asv_zed2icamera_workspace
+
+# Remove the unwanted directory
+RUN rm -rf /home/asv_zed2icamera_workspace/src/zed2i_camera/zed2i_camera/utils/orin_weights
+
+
+#WORKDIR /usr/local/zed
+RUN /bin/bash -c "source /opt/ros/humble/install/setup.bash; colcon build"
+RUN echo 'source /opt/ros/humble/install/setup.bash; source /home/asv_zed2icamera_workspace/install/setup.bash;' >> /root/.bashrc
+
+
+CMD ["/bin/bash", "-c", "source /opt/ros/humble/install/setup.bash; source install/setup.bash;. ./exec_trash_detection.sh"]
+
+

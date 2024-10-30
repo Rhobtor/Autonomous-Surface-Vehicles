@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>zed2i_camera</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="luismidp7@gmail.com">Luis Miguel</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>asv_interfaces</exec_depend> <!-- for interfaces -->
+  <exec_depend>rclpy</exec_depend> <!-- for python -->
+  
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>zed_wrapper</depend> <!-- for camera initialization -->
+  <depend>slam_toolbox</depend> <!-- for slam -->
+  <depend>nav2_bringup</depend> <!-- for nav2 initialization -->
+  <depend>pointcloud_to_laserscan</depend> <!-- for nav2 initialization -->
+  <depend>message_filters</depend>
+  
+  <build_depend>asv_interfaces</build_depend> <!-- for interfaces -->
+  <build_depend>rclpy</build_depend> <!-- for python -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

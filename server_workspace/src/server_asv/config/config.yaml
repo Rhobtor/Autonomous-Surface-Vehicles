@@ -1,0 +1,17 @@
+/**:
+  ros__parameters:
+    # General parameters
+    debug: False
+    # Map parameters
+    path_planner_timeout: 20.0
+    navigation_map_path: "mapas/Alamillo95x216"
+    binary_dilation: 2
+    # Server parameters
+    internet_loss_timeout: 30.0
+    mqtt_addr: "bender.us.es"
+    mqtt_port: 1883
+    mqtt_user: "server" # TODO: Change to avoid collisions
+    mqtt_password: ""
+
+
+

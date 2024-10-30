@@ -1,0 +1,16 @@
+/**:
+  ros__parameters:
+    # General parameters
+    debug: true
+    record_video: true
+    recorded_video_path: "utils/videos/"
+    show_detections: false
+    save_logs: true
+    savelogs_timer_period: 1.0 # seconds
+    logs_path: "utils/detection_logs/"
+    # Weights parameters
+    weights_folder_path: "utils/xavier_weights/"
+    weights_name: "best_v8n_fp16.engine"
+    conf: 0.5
+    iou: 0.5
+    image_size: 1280
