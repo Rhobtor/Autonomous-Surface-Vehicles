@@ -5,7 +5,7 @@ google_analytics:
 theme: jekyll-theme-cayman
 
 # Set the base URL of your site. Defaults to `/` if not set.
-baseurl: "/ASV"
+baseurl: "/Autonomous-Surface-Vehicles"
 
 include:
   - _pages
